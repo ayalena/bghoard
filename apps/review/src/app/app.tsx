@@ -1,7 +1,4 @@
 import styled from '@emotion/styled';
-
-// import NxWelcome from './nx-welcome';
-
 import { Game } from '@bghoard/api-interface';
 import { useState, useEffect } from 'react';
 
@@ -64,16 +61,7 @@ export const ratingFormat = (rating?: number) =>
   (rating === undefined ? '?' : rating.toFixed(0)) + '/5';
 
 export function App() {
-  // const [apiResponse, setApiResponse] = useState<ApiResponse>({
-  //   message: 'Loading...',
-  // });
   const [games, setGames] = useState<Game[]>([]);
-
-  // useEffect(() => {
-  //   fetch(API_URL)
-  //     .then((r) => r.json())
-  //     .then(setApiResponse);
-  // }, []);
 
   useEffect(() => {
     fetch('api/game')
@@ -83,15 +71,11 @@ export function App() {
 
   return (
     <StyledApp>
-      {/* <NxWelcome title="review" /> */}
       <div style={{ textAlign: 'center' }}>
         <h1>Board Game Hoard: Review</h1>
       </div>
-      {/* <p>{apiResponse.message}</p> */}
-      {/* <div>{JSON.stringify(games)}</div> */}
       <TileGrid>
         {games.map((game) => {
-          // console.log('game --> ', game);
           return (
             <a
               href={'/' + game.id}

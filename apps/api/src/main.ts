@@ -1,32 +1,9 @@
-/**
- * This is not a production server yet!
- * This is only a minimal backend to get started.
- */
-
-// import { ApiResponse, API_URL } from '@bghoard/api-interface';
 import express from 'express';
-// import * as path from 'path';
-
-const app = express();
-
-// app.use('/assets', express.static(path.join(__dirname, 'assets')));
-
-// app.get(API_URL, (req, res) => {
-//   res.send({ message: 'Welcome to api!' } as ApiResponse);
-// });
-
-// const port = process.env.PORT || 3333;
-// const server = app.listen(port, () => {
-//   console.log(`Listening at http://localhost:${port}/api`);
-// });
-// server.on('error', console.error);
-
-// import * as express from 'express';
 import { getGames } from './app/game';
 import { createReview, getReviews } from './app/review';
 import { addItemToCart, getCart, updateItemInCart } from './app/store';
 
-// const app = express();
+const app = express();
 app.use(express.json());
 
 app.get('/api/game', getGames);
