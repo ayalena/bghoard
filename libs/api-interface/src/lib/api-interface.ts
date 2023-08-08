@@ -1,7 +1,3 @@
-// export function apiInterface(): string {
-//   return 'api-interface';
-// }
-
 export interface ApiResponse {
   message: string;
 }
@@ -17,7 +13,7 @@ export interface Game {
 }
 
 export interface Review {
-  game: string;
+  game: string | undefined;
   rating: number;
   content: string;
 }
@@ -26,5 +22,3 @@ export interface CartItem {
   game: string;
   quantity: number;
 }
-
-export const API_URL = '/api';
