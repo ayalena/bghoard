@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@bghoard/api-interface": ["libs/api-interface/src/index.ts"],
+      "@bghoard/review/ui-tile": ["libs/review/ui-tile/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
